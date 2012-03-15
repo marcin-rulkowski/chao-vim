@@ -16,6 +16,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'msanders/snipmate.vim'
 
 Bundle 'sukima/xmledit'
+Bundle 'vim-ruby/vim-ruby'
 
 Bundle 'L9' 
 Bundle 'FuzzyFinder'
@@ -33,4 +34,6 @@ filetype plugin indent on     " required!
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle command are not allowed..
 "
-source ~/.vim/personalrc
+
+:silent! source ~/.vim/personalrc
+
