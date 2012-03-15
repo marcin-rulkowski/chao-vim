@@ -1,0 +1,43 @@
+snippet tmet
+	/**
+	 * @test
+	 */
+	public function ${1:Method}_${2:Status}_${3:Result}()
+	{
+		$this->markTestIncomplete('Test not implemented.');
+		${5}
+	}
+snippet tmet_err
+	/**
+	 * @test
+	 * @expectedException ${1:Exception}
+	 */
+	public function ${2:Method}_${3:Status}_${4:Result}()
+	{
+		$this->markTestIncomplete('Test not implemented.');
+		${5}
+	}
+snippet tclass
+	<?php
+
+	class ${1:class}
+	extends PHPUnit_Framework_TestCase
+	{
+		${5}
+	}
+
+snippet head
+	/**
+	* ${4:description}
+	*
+	* @category   Baobaz
+	* @package    ${1:package}
+	* @subpackage ${2:subpackage}
+	* @author     Marcin Rulkowski <marcin.rulkowski@baobaz.com>
+	* @copyright  Copyright (c) `strftime('%Y')` Baobaz Polska (http://www.baobaz.com)
+	* @license    http://opensource.org/licenses/osl-3.0.php   Open Software License (OSL 3.0)
+	* @version    ${3:version}
+	* @link       http://www.baobaz.com
+	*/	
+
+	${5}

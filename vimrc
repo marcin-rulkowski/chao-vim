@@ -8,20 +8,19 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
-"
-" original repos on github
-Bundle 'Lokaltog/vim-easymotion'
+" Bundles of choice **********************************************************
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'Shougo/neocomplcache'
+
 Bundle 'msanders/snipmate.vim'
+
 Bundle 'sukima/xmledit'
-Bundle 'spf13/PIV'
-Bundle 'ervandew/supertab'
-Bundle 'wgibbs/vim-irblack'
-" vim-scripts repos
+
 Bundle 'L9' 
 Bundle 'FuzzyFinder'
-
+" Color schemes
+Bundle 'wgibbs/vim-irblack'
 
 filetype plugin indent on     " required! 
 "
