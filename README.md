@@ -13,6 +13,8 @@ Thanks !
 Installation
 ------------
 
-Run command:
+#Run commands:
 
-bash -s ~/Library/Repository < <(curl -s https://raw.github.com/marcin-rulkowski/chao-vim/master/install.sh)
+curl -s https://raw.github.com/marcin-rulkowski/chao-vim/master/install.sh > install.sh
+bash install.sh ~/Library/Repository
+rm install.sh
