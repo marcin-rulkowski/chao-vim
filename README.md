@@ -6,10 +6,13 @@ This repository contains vim configuration prepared for my own needs.
 Package manager
 ---------------
 
-As package manager for plugins that are used in this configuration of vim
-is used vundle (https://github.com/gmarik/vundle.git). Thanks !
+Vundle is used as a package manager for vim plugins (https://github.com/gmarik/vundle.git). 
+
+Thanks !
 
 Installation
 ------------
 
-TODO
+Run command:
+
+bash -s ~/Library/Repository < <(curl -s https://raw.github.com/marcin-rulkowski/chao-vim/master/install.sh)

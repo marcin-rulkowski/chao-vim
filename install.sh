@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Backup old vim configuration - so user could revert to old ways.
-
 if [ -d ~/vim-backup ]
 then
     rm -rf ~/vim-backup
-    mkdir ~/vim-backup
 fi
+
+mkdir ~/vim-backup
 
 if [ -d ~/.vim ]
 then
@@ -23,31 +23,44 @@ then
     mv ~/.gvimrc ~/vim-backup/gvimrc
 fi
 
-# Prepare file structure for new configuration
-
+# Installation of vim configuration.
 mkdir -p ~/.vim/backup/swap
 mkdir -p ~/.vim/bundle
 
-ConfigPath=$1
-VundlePath=$2
+Current=`pwd`
 
-if [ ! -d $ConfigPath ]
+if [ $# -eq 1 ]
 then
-    # Create read only repo with configuration.
-    git clone https://github.com/marcin-rulkowski/chao-vim.git $ConfigPath
+    Library=$1
+    if [ ! -d $Library ]
+    then
+        #Create new libraryr that would store repositories.
+        mkdir $Library
+    fi
+
+    #Go to library
+    cd $Library
+
+    if [ ! -d ./chao-vim ]
+    then
+        # Create read only repo with configuration.
+        git clone https://github.com/marcin-rulkowski/chao-vim.git
+    fi
+
+    if [ ! -d ./vundle ]
+    then
+        # Create read only repo witb package manager
+        git clone https://github.com/gmarik/vundle.git
+    fi
+
+    ln -s `pwd`/vundle ~/.vim/bundle/vundle
+    ln -s `pwd`/chao-vim/vimrc ~/.vimrc
+    ln -s `pwd`/chao-vim/gvimrc ~/.gvimrc
+
+    vim +BundleInstall +qall
+
+    ln -s `pwd`/chao-vim/personalrc ~/.vim/personalrc
+
+    #Return where you where before.
+    cd $Current
 fi
-
-if [ ! -d $VundlePath ]
-then
-    git clone https://github.com/gmarik/vundle.git $VundlePath
-fi
-
-ln -s $VundlePath ~/.vim/bundle/vundle
-ln -s $ConfigPath/vimrc ~/.vimrc
-ln -s $ConfigPath/gvimrc ~/.gvimrc
-
-vim +BundleInstall +qall
-
-ln -s $ConfigPath/personalrc ~/.vim/personalrc
-
-    
