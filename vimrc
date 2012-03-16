@@ -11,9 +11,10 @@ Bundle 'gmarik/vundle'
 " Bundles of choice **********************************************************
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'Shougo/neocomplcache'
 
 Bundle 'msanders/snipmate.vim'
+
+Bundle 'ervandew/supertab'
 
 Bundle 'sukima/xmledit'
 Bundle 'vim-ruby/vim-ruby'
