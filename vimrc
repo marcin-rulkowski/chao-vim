@@ -14,13 +14,7 @@ Bundle 'scrooloose/nerdcommenter'
 
 Bundle 'msanders/snipmate.vim'
 
-Bundle 'ervandew/supertab'
-
 Bundle 'sukima/xmledit'
-Bundle 'vim-ruby/vim-ruby'
-
-Bundle 'L9' 
-Bundle 'FuzzyFinder'
 " Color schemes
 Bundle 'wgibbs/vim-irblack'
 

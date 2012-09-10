@@ -101,10 +101,3 @@ autocmd BufWritePre *.xml mark z | %s/ *$//e | 'z
 :noremap <Leader>n :NERDTreeToggle<CR>
 let NERDTreeMouseMode=1 " Single click for everything
 
-" Fuzzy Finder ****************************************************************
-nmap <Leader>l :FufLine<CR>
-
-" SuperTab ********************************************************************
-
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-n>"
-
